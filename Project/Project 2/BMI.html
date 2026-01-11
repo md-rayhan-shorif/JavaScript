@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>BMI Calculator</title>
+</head>
+<body class=" bg-gray-900 text-white">
+    <h1 class=" text-center text-3xl mt-30 mb-10 ">BMI Calculator</h1>
+    <div class=" my-10">
+    <form action="">
+        <label for="height" >
+            <p class=" mx-5 text-2xl ">
+                Height in CM <input id="height" type="" class=" h-10 text-black bg-gray-100 w-50">
+            </p>
+        </label>
+    </div>
+    <label for="weight">
+        <p class=" mx-5 text-2xl ">
+            Weight in KG <input id="weight" type="number" class=" h-10 text-black bg-gray-100 w-50">
+        </p>
+    </label>
+    <button class=" ml-30 mt-10 text-2xl bg-blue-300 h-10 w-30 rounded-xl" >Calculate</button>
+    </form>
+    <div id="result" class=" mt-20 ml-10 ">Your BMI </div>
+    <script src="BMI.js"></script>
+</body>
+</html>
