@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Guess Number</title>
+</head>
+<body class=" bg-gray-950 text-white text-center ">
+    <h1 class="my-10 text-3xl bg-gray-900 p-4 font-bold">Number guessing game</h1>
+    <div class="gap-2 flex flex-col mb-4">
+
+        <p>Try and Guess the Number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right number</p>
+    </div>
+    <h1 class=" text-4xl mt-20 mb-10">Guess a Number</h1>
+    <form >
+        <div class=" flex flex-col items-center mb-10">
+
+            <input id="userin" type="" class=" bg-gray-300 text-black rounded-2xl p-4 ">
+            <input type="submit" id="subt" value="Submit guess" class=" mt-10 bg-black p-4 rounded-xl ">
+        </div>
+    </form>
+    <div id="resultPara" class=" flex flex-col gap-2 items-center">
+        <p>Previous Guesses : <span id="guesslist"></span></p>
+        <p>Guesses Remaining : <span id="guessleft"></span></p>
+        <p id="lowOrHi" class=" bg-black w-auto p-6  text-2xl my-20 rounded-xl " > Good Luck</p>
+    </div>
+    <script src="guessGame.js"></script>
+</body>
+</html>
