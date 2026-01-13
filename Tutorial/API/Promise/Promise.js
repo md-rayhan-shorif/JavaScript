@@ -1,6 +1,6 @@
 
 
-
+// Creating Promise 
 const promiseOne = new Promise(function(resolve, reject){
     setTimeout(() => {
         resolve();
@@ -87,3 +87,59 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+
+
+
+// using fetch mathod to get data from api
+const pic = document.querySelector('#picture')
+
+
+
+async function getRandomUser() {
+    try {
+        const response = await fetch('https://randomuser.me/api/')
+        const data = await response.json();
+        pic.innerHTML = `
+        <img src=${data.results[0].picture.large} class="bg-amber-50 w-50 h-50" alt="">`
+
+        console.log(response)
+        console.log(data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+getRandomUser()
+
+// another way to use fetch - by using then
+
+const image = document.querySelector('#image')
+fetch('https://randomuser.me/api/')
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    image.innerHTML = `
+        <img src=${data.results[0].picture.large} class="bg-amber-50 w-50 bg-cover h-50" alt="">`
+    console.log(data)
+
+})
+.catch((error)=>{
+    console.log("Error ")
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
